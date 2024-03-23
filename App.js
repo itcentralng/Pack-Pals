@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import * as Font from 'expo-font';
 import LoginScreen from './src/screens/LoginScreen';
+import SignupScreen from './src/screens/SignupScreen';
 import HomeScreen from './src/screens/HomeScreen';
 // import ReceiveDocumentsScreen from './src/screens/ReceiveDocumentsScreen';
 // import UploadDocumentScreen from './src/screens/UploadDocumentScreen';
@@ -14,7 +15,9 @@ import HomeScreen from './src/screens/HomeScreen';
 // import LeaveRequestDetailsScreen from './src/screens/LeaveRequestDetailsScreen';
 import UserProfileScreen from './src/screens/UserProfileScreen';
 import NotificationScreen from './src/screens/NotificationScreen';
+import AddPostScreen from './src/screens/AddPostScreen';
 import Chats from './src/screens/ChatsScreen';
+import Navbar from './src/components/Navbar';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -48,7 +51,7 @@ const MainTabNavigator = () => (
           iconName = focused ? 'home' : 'home-outline';
         } else if (route.name === 'Receive Documents') {
           iconName = focused ? 'document-text' : 'document-text-outline';
-        } else if (route.name === 'Upload Document') {
+        } else if (route.name === 'AddPost') {
           iconName = focused ? 'cloud-upload' : 'cloud-upload-outline';
         } else if (route.name === 'Chats') {
           iconName = focused ? 'star' : 'star-outline';
@@ -73,6 +76,7 @@ const MainTabNavigator = () => (
     <Tab.Screen name="Appraisal Feedback" component={AppraisalFeedbackScreen} options={{ headerShown: false }} />
     <Tab.Screen name="Leave Management" component={LeaveManagementStack} options={{ headerShown: false }} /> */}
     <Tab.Screen name="Notification" component={NotificationScreen} options={{ headerShown: false }} /> 
+    <Tab.Screen name="AddPost" component={AddPostScreen} options={{ headerShown: false }} /> 
     <Tab.Screen name="Chats" component={Chats} options={{ headerShown: false }} /> 
     <Tab.Screen name="Profile" component={UserProfileScreen} options={{ headerShown: false }} /> 
   </Tab.Navigator>
@@ -86,7 +90,8 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login" headerMode="none">
+      <Stack.Navigator initialRouteName="Signup" headerMode="none">
+        <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Main" component={MainTabNavigator} />
       </Stack.Navigator>
