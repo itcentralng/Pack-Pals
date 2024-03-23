@@ -1,17 +1,22 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import LogoutButton from './LogoutButton'
+import { createStackNavigator } from '@react-navigation/stack';
+
+
+
+const Stack = createStackNavigator();
 
 function Navbar({ navigation }) {
 
-  handleLogout = () => {
-    navigation.navigate('Login')
-  }
+  const handleSignup = () => {
+    navigation.navigate('Login', { screen: 'Login' });
+  };
 
   return (
     <View style={styles.navbar}>
       <Text style={styles.logo}>PackPals.</Text>
-      <LogoutButton onPress={handleLogout} />
+      <LogoutButton onPress={handleSignup} />
     </View>
   )
 }
