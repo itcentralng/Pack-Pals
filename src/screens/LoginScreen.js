@@ -40,7 +40,7 @@ const LoginScreen = ({ navigation }) => {
         iconName="lock"
         placeholderTextColor="lightgray"
       />
-      <LoginButton onPress={handleLogin} />
+      <LoginButton title="Login" onPress={handleLogin} />
     </View>
   );
 };
