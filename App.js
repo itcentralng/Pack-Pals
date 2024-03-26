@@ -67,7 +67,7 @@ const MainTabNavigator = () => (
     tabBarOptions={{
       activeTintColor: 'gold',
       inactiveTintColor: 'gray',
-      tabBarStyle: { backgroundColor: "#000" } // Set background color to black
+      tabBarStyle: { backgroundColor: "#000" }
     }}
   >
     <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
