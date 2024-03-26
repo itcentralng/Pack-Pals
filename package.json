@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
+    "@react-native-community/datetimepicker": "^7.6.3",
     "@react-navigation/bottom-tabs": "^6.5.19",
     "@react-navigation/native": "^6.1.16",
     "@react-navigation/stack": "^6.3.28",
@@ -18,7 +19,8 @@
     "react": "18.2.0",
     "react-native": "0.73.5",
     "react-native-gifted-chat": "^2.4.0",
-    "react-native-maps": "1.10.0"
+    "react-native-maps": "1.10.0",
+    "expo-image-picker": "~14.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
