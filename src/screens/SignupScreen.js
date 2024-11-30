@@ -45,17 +45,17 @@ const SignupScreen = ({ navigation }) => {
         placeholderTextColor="lightgray"
       />
       <InputField
-        placeholder="Credit Card Number"
+        placeholder="Please provide NIN"
         onChangeText={(text) => setCreditCardNumber(text)}
         iconName="credit-card"
       />
-      <InputField
+      {/* <InputField
         placeholder="Expiry Date (MM/YY)"
         onChangeText={(text) => setExpiryDate(text)}
         iconName="calendar"
-      />
+      /> */}
       <InputField
-        placeholder="CVV"
+        placeholder="Please provide BVN"
         secureTextEntry={true}
         onChangeText={(text) => setCvv(text)}
         iconName="lock"

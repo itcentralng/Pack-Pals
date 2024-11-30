@@ -12,7 +12,7 @@ function HomeScreen() {
       <SearchBar placeholder='Search here...' />
       <ScrollView>
       <ClientCard />
-      <ClientCard />
+      {/* <ClientCard /> */}
       </ScrollView>
       </View>
     </View>
